@@ -1,0 +1,19 @@
+.line_container {
+  /* background: aqua; */
+  width: 100%;
+  height: calc(50vh - 60px);
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .line_container {
+    height: 54vh;
+  }
+}
+@media screen and (max-width: 425px) {
+  .line_container {
+    /* height: fit-content; */
+  }
+}

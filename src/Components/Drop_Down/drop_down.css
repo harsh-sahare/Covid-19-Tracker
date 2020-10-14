@@ -1,0 +1,84 @@
+.container {
+  height: 50px;
+  max-height: 100vh;
+  width: 303px;
+  margin-left: 5px;
+}
+.container.hidden {
+  display: none;
+}
+.main_div {
+  display: flex;
+  height: 40px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  /* remove */
+  background: rgb(68, 67, 67);
+  border-radius: 10px;
+}
+.option_div {
+  /* display: none; */
+  transform: scale(0);
+  margin-top: 5px;
+  padding: 5px;
+  background: rgb(68, 67, 67);
+
+  color: white;
+  border-radius: 5px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+.option_div li {
+  cursor: pointer;
+}
+.option_div li:hover {
+  background: gray;
+}
+.option_div.show {
+  animation: anime-1 forwards linear 200ms;
+}
+.option_div.hide {
+  animation: anime-1 forwards linear 200ms alternate-reverse;
+}
+
+@keyframes anime-1 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.name {
+  margin-right: auto;
+}
+.icon.rotn {
+  animation: rotate 200ms linear forwards;
+}
+.icon.rotz {
+  animation: rotate 200ms linear alternate-reverse forwards;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    display: none;
+  }
+  .container.hidden {
+    display: block;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    margin: auto;
+  }
+}

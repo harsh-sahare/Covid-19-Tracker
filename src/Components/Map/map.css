@@ -1,0 +1,37 @@
+.map {
+  background: bisque;
+  height: 451px;
+  margin-top: 10px;
+}
+.leaflet-container {
+  height: 100%;
+  z-index: 0;
+}
+.countryFlag {
+  margin: auto;
+  width: fit-content;
+}
+.info-container {
+  min-width: 196px;
+}
+.countryName {
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+}
+
+.label {
+  display: flex;
+}
+.left {
+  margin-right: 10px;
+  font-weight: 800;
+  font-size: 13px;
+}
+.right {
+  align-self: flex-end;
+}
+.label:nth-child(1) .right {
+  width: 69px;
+  text-align: end;
+}

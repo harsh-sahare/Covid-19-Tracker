@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@800&display=swap");
+
+.card {
+  background-color: rgb(231, 231, 231);
+  color: black;
+  width: 220px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.card:nth-child(1) {
+  margin-left: auto;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 4px;
+  background: red;
+  transform: scale(0);
+  transition: all 200ms;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card:hover::before {
+  transform: scale(1);
+}
+
+.card:nth-child(1)::before {
+  background: orange;
+}
+.card:nth-child(2)::before {
+  background: orangered;
+}
+.card:nth-child(4)::before {
+  background: green;
+}
+.card .card_title {
+  font-family: "Baloo Tammudu 2", cursive;
+  text-align: center;
+  color: black;
+  font-size: 26px;
+}
+.card .num {
+  font-family: "Baloo Tammudu 2", cursive;
+  text-align: center;
+  font-size: 30px;
+}
+.card:nth-child(1) .num {
+  color: orange;
+}
+.card:nth-child(2) .num {
+  color: orangered;
+}
+.card:nth-child(3) .num {
+  color: red;
+}
+.card:nth-child(4) .num {
+  color: green;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 159px;
+  }
+  .card .card_title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 129px;
+  }
+  .card .card_title {
+    font-size: 15px;
+  }
+  .card .num {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .card {
+    width: 60%;
+  }
+}

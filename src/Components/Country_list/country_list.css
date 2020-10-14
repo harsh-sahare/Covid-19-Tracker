@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.country_container {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 50vh;
+}
+.country_container li {
+  width: 100%;
+  font-size: 15px;
+  margin-left: 10px;
+  display: flex;
+}
+.country_container li .left {
+  margin-right: auto;
+}
+
+.country_container li .right {
+  margin-right: 16px;
+}
+.country_container li:nth-child(even) {
+  background: rgb(71, 71, 71);
+}
+.country_container li:nth-child(odd) {
+  background: rgb(90, 89, 89);
+}
