@@ -33,7 +33,7 @@ function App() {
     let temp_country_data = [];
 
     async function GetData() {
-      Fetcheddata = await Axios.get("https://corona-api.com/countries");
+      Fetcheddata = await Axios.get("https://api.covid19india.org/data.json");
 
       setdata(Fetcheddata.data);
 
